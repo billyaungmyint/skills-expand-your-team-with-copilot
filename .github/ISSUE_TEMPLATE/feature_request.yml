@@ -1,0 +1,89 @@
+name: Feature Request
+description: Request a new feature or functionality for the school activities system
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Mergington High School's activities system! Please fill out this form to help us understand your feature request.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the problem or need that this feature would address
+      placeholder: "Example: Students can't filter activities by difficulty level, so beginners and advanced students see the same options"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the desired feature
+      description: What should this feature do? Be as specific as possible.
+      placeholder: "Example: Add a difficulty level filter (Beginner, Intermediate, Advanced) to the sidebar that shows only activities matching that level"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know when this feature is complete? List specific, testable requirements.
+      placeholder: |
+        Example:
+        - [ ] Activities can have an optional difficulty level field (Beginner, Intermediate, Advanced)
+        - [ ] Sidebar has a difficulty filter with options: All, Beginner, Intermediate, Advanced
+        - [ ] Clicking a difficulty level shows only matching activities
+        - [ ] Activities without a difficulty level appear when "All" is selected
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the system does this affect?
+      description: Select the main area this feature relates to
+      options:
+        - Activities Display/Filtering
+        - User Interface/Design
+        - Login/Authentication
+        - Activity Registration
+        - Schedule Management
+        - Backend/Database
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technical Hints (Optional)
+      description: Any suggestions for implementation? Files to modify? Technologies to use?
+      placeholder: "Example: May need to update database.py to add difficulty field, modify app.js filtering logic, and add filter buttons in index.html"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: User Impact
+      description: Who will benefit from this feature?
+      options:
+        - label: Students
+        - label: Teachers
+        - label: Both
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information, mockups, examples, or context that would help?
+      placeholder: "Example: Similar to how the category filter works, but for skill levels"
+    validations:
+      required: false

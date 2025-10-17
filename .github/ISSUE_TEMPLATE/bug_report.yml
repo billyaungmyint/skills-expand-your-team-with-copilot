@@ -1,0 +1,109 @@
+name: Bug Report
+description: Report a problem with the school activities system
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! This helps us keep the activities system working smoothly for everyone.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the problem you're experiencing
+      placeholder: "Example: The website colors are blue, but our school colors are white and lime green"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen instead?
+      description: Describe the correct or expected behavior
+      placeholder: "Example: The website should use our school colors (white and lime green) to show school pride"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce the problem
+      description: Step-by-step instructions to see the issue
+      placeholder: |
+        Example:
+        1. Go to the activities page
+        2. Look at the header and buttons
+        3. Notice they are blue instead of school colors
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know when this bug is fixed? Be specific about what needs to change.
+      placeholder: |
+        Example:
+        - [ ] Header background uses lime green color
+        - [ ] Buttons use school colors (white and lime green)
+        - [ ] Footer matches school color scheme
+        - [ ] School mascot appears on the page
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the system has the bug?
+      description: Select the area where you see the problem
+      options:
+        - Visual/Colors/Styling
+        - Activities Display
+        - Filtering/Search
+        - Login/Authentication
+        - Activity Registration
+        - Schedule Display
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: How serious is this bug?
+      description: Choose the impact level
+      options:
+        - Low - Minor visual issue or cosmetic problem
+        - Medium - Feature doesn't work as expected but has workaround
+        - High - Important feature is broken
+        - Critical - System is unusable
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technical Hints (Optional)
+      description: Any suggestions for fixing this? Files that might need changes?
+      placeholder: "Example: Probably need to update styles.css to change color scheme"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Screenshots, error messages, or any other helpful details
+      placeholder: "Example: School colors reference: https://example.com/school-colors"
+    validations:
+      required: false
