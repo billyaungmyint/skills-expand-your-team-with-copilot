@@ -1,0 +1,125 @@
+name: Content Update
+description: Update activity information, schedules, or descriptions
+title: "[Content]: "
+labels: ["content", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request updates to activity information, schedules, descriptions, or other content.
+
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: What type of update is needed?
+      description: Select the kind of content change you need
+      options:
+        - Add new activity
+        - Update existing activity
+        - Remove activity
+        - Change activity schedule
+        - Update activity description
+        - Change participant limits
+        - Other content change
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: Which activity needs to be updated? (or name of new activity)
+      placeholder: "Example: Chess Club"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-info
+    attributes:
+      label: Current Information (if updating)
+      description: What is the current information that needs to change?
+      placeholder: |
+        Example:
+        Current schedule: Mondays and Fridays, 3:15 PM - 4:45 PM
+        Current description: Learn strategies and compete in chess tournaments
+        Current max participants: 12
+    validations:
+      required: false
+
+  - type: textarea
+    id: new-info
+    attributes:
+      label: New or Updated Information
+      description: What should the new information be? Include all relevant details.
+      placeholder: |
+        Example:
+        New schedule: Tuesdays and Thursdays, 3:30 PM - 5:00 PM
+        New description: Advanced chess strategies and tournament preparation
+        New max participants: 15
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Activity Category (if adding new activity)
+      description: What category does this activity belong to?
+      options:
+        - Not applicable (updating existing)
+        - Sports
+        - Arts
+        - Academic
+        - Community
+        - Technology
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: schedule-details
+    attributes:
+      label: Schedule Details (if schedule change)
+      description: Provide complete schedule information
+      placeholder: |
+        Example:
+        Days: Monday, Wednesday
+        Time: 3:30 PM - 5:00 PM
+        Or: Saturday, 10:00 AM - 2:00 PM
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we verify this update is complete? Be specific about what should change.
+      placeholder: |
+        Example:
+        - [ ] Chess Club schedule updated to Tuesdays and Thursdays
+        - [ ] Time shows as 3:30 PM - 5:00 PM on activity card
+        - [ ] Activity appears when filtering for Tuesday or Thursday
+        - [ ] Max participants updated to 15
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technical Hints (Optional)
+      description: Any specific files or database entries that need changes?
+      placeholder: "Example: Update the initial_activities dictionary in src/backend/database.py"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Why is this update needed? Any other relevant information?
+      placeholder: "Example: The Chess Club advisor changed, and the new advisor can only do Tuesdays and Thursdays"
+    validations:
+      required: false

@@ -1,0 +1,131 @@
+name: UI/UX Enhancement
+description: Improve the visual design or user experience of the activities system
+title: "[UI/UX]: "
+labels: ["enhancement", "ui/ux"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to suggest improvements to the visual design, layout, or user experience of the activities system.
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: What currently exists?
+      description: Describe the current design or user experience
+      placeholder: "Example: The interface only has a light theme with a blue color scheme"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: What should be changed or added?
+      description: Describe your proposed improvement in detail
+      placeholder: "Example: Add a dark mode toggle button that switches between light and dark themes"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this improvement needed?
+      description: Explain the benefit or problem this solves
+      placeholder: "Example: Many students prefer dark mode for reduced eye strain, especially when browsing after school"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know when this enhancement is complete? Be specific about what should work.
+      placeholder: |
+        Example:
+        - [ ] Toggle button appears in top right corner
+        - [ ] Clicking toggle switches between light and dark mode
+        - [ ] Dark mode uses dark background with light text
+        - [ ] User's preference is saved for future visits
+        - [ ] All UI elements are visible in both modes
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which component(s) should be updated?
+      description: Select the main area to be enhanced
+      options:
+        - Overall theme/colors
+        - Header/Navigation
+        - Activity cards
+        - Filters/Sidebar
+        - Buttons
+        - Forms/Modals
+        - Footer
+        - Layout/Spacing
+        - Typography/Fonts
+        - Icons/Images
+        - Animations/Transitions
+        - Mobile responsiveness
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this enhancement?
+      description: Rate the priority level
+      options:
+        - Nice to have - Would improve experience
+        - Should have - Noticeable improvement
+        - Must have - Critical for usability
+    validations:
+      required: true
+
+  - type: textarea
+    id: design-reference
+    attributes:
+      label: Design References (Optional)
+      description: Links to similar designs, mockups, color codes, or examples
+      placeholder: |
+        Example:
+        - Similar dark mode: https://example.com
+        - Color scheme: #1a1a1a for dark background, #e0e0e0 for text
+        - Reference design: [attach screenshot or mockup]
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-hints
+    attributes:
+      label: Technical Hints (Optional)
+      description: Suggestions for implementation, CSS properties, or files to modify
+      placeholder: "Example: Add CSS variables for theme colors in styles.css, use JavaScript to toggle classes and save preference to localStorage"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: accessibility
+    attributes:
+      label: Accessibility Considerations
+      description: Does this enhancement need to consider accessibility?
+      options:
+        - label: This should maintain color contrast for readability
+        - label: This should work with keyboard navigation
+        - label: This should work on mobile devices
+        - label: This should work with screen readers
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information, user feedback, or context
+      placeholder: "Example: Students have been requesting this feature for months, similar systems have this option"
+    validations:
+      required: false
